@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "nombre": "Camisa Lily",
+    "precio": 69.99,
+    "imagen": "https://placeholder.pics/svg/150",
+    "descripcion": "Camisa de satén.",
+    "categoria": {
+      "id": "ropa",
+      "nombre": "Ropa"
+    }
+  },
+  {
+    "id": 2,
+    "nombre": "Jean oxford  ",
+    "precio": 89.99,
+    "imagen": "https://placeholder.pics/svg/150",
+    "descripcion": "Jean corte oxford, tiro alto.",
+    "categoria": {
+      "id": "ropa",
+      "nombre": "Ropa"
+    }
+  },
+  {
+    "id": 3,
+    "nombre": "Cinto Alexander",
+    "precio": 34.99,
+    "imagen": "https://placeholder.pics/svg/150",
+    "descripcion": "Cinto faja XL.",
+    "categoria": {
+      "id": "accesorios",
+      "nombre": "Accesorios"
+    }
+  },
+  {
+    "id": 4,
+    "nombre": "Botinetas Aurora",
+    "precio": 89.99,
+    "imagen": "https://placeholder.pics/svg/150",
+    "descripcion": "Botinetas de cuero negro.",
+    "categoria": {
+      "id": "calzado",
+      "nombre": "Calzado"
+    }
+  },
+  {
+    "id": 5,
+    "nombre": "Zapatillas Star",
+    "precio": 79.99,
+    "imagen": "https://placeholder.pics/svg/150",
+    "descripcion": "Zapatillas Urbanas de lona.",
+    "categoria": {
+      "id": "calzado",
+      "nombre": "Calzado"
+    }
+  },
+  {
+    "id": 6,
+    "nombre": "Remera Nataly",
+    "precio": 25.99,
+    "imagen": "https://placeholder.pics/svg/150",
+    "descripcion": "Remera con lentejuelas.",
+    "categoria": {
+      "id": "ropa",
+      "nombre": "Ropa"
+    }
+  },
+  {
+    "id": 7,
+    "nombre": "Aros Krisna",
+    "precio": 9.99,
+    "imagen": "https://placeholder.pics/svg/150",
+    "descripcion": "Aros de acero tipo argolla.",
+    "categoria": {
+      "id": "accesorios",
+      "nombre": "Accesorios"
+    }
+  },
+  {
+    "id": 8,
+    "nombre": "Sandalias Roma",
+    "precio": 79.99,
+    "imagen": "https://placeholder.pics/svg/150",
+    "descripcion": "Sandalias de charol con apliques.",
+    "categoria": {
+      "id": "calzado",
+      "nombre": "Calzado"
+    }
+  },
+  {
+    "id": 9,
+    "nombre": "Reloj Milena",
+    "precio": 64.99,
+    "imagen": "https://placeholder.pics/svg/150",
+    "descripcion": "Reloj deportivo.",
+    "categoria": {
+      "id": "accesorios",
+      "nombre": "Accesorios"
+    }
+  },
+  {
+    "id": 10,
+    "nombre": "Anillo Orus",
+    "precio": 15.99,
+    "imagen": "https://placeholder.pics/svg/150",
+    "descripcion": "Anillo de fantasía facetado.",
+    "categoria": {
+      "id": "accesorios",
+      "nombre": "Accesorios"
+    }
+  }
+]

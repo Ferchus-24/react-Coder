@@ -1,26 +1,33 @@
-import Carrito from "./common/Carrito";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import categories from "../../data/categorias.json";
+import { CartWidget } from "./common/CartWidget";
 
 export const Navbar = () => {
   return (
-    <header className="header">
-      <nav>
-        <h1>LibrosLichu</h1>
-        <ul className="nav-lista">
-          <li>
-            <a href="#">Ficción y Literatura</a>
-          </li>
-          <li>
-            <a href="#">Ingeniería, Técnica y Ciencias Exactas</a>
-          </li>
-          <li>
-            <a href="#">Infantil y Juvenil</a>
-          </li>
-          <li>
-            <a href="#">Humanidades</a>
-          </li>
-        </ul>
-        <Carrito />
-      </nav>
-    </header>
+    <nav className="header">
+      <h1>Indumentaria Charlys</h1>
+      <ul className="nav-menu">
+        <li>
+          <NavLink to="/" activeclassname="active" className="nav-link">
+            Inicio
+          </NavLink>
+        </li>
+        {categories.map((category) => {
+          return (
+            <li key={category.id}>
+              <NavLink
+                className="nav-link"
+                to={`/category/${category.id}`}
+                activeclassname="active"
+              >
+                {category.nombre}
+              </NavLink>
+            </li>
+          );
+        })}
+      </ul>
+      <CartWidget />
+    </nav>
   );
 };

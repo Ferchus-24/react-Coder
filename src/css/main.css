@@ -2,18 +2,36 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: aqua;
+  background-color: coral;
+  padding: 10px;
 }
 
-.nav-lista {
+.nav-menu {
   display: flex;
-  list-style: none;
+  list-style-type: none;
   text-decoration: none;
   gap: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.carrito {
+  text-decoration: none;
 }
