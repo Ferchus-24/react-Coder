@@ -28,11 +28,8 @@ export const Checkout = () => {
   if (docId) {
     return (
       <>
-        <h1>Muchas gracias por tu compra</h1>
-        <p>
-          Para hacer el seguimiento de tu pedido, el identificador es este:{" "}
-          {docId}
-        </p>
+        <h1>Gracias por tu compra!</h1>
+        <p>Con este código podés hacer el seguimiento de tu pedido: {docId}</p>
       </>
     );
   }

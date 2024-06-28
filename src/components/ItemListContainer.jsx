@@ -38,8 +38,8 @@ export const ItemListContainer = () => {
   }, [categoryId]);
 
   return (
-    <div className="item-list-container">
-      <h1>{titulo}</h1>
+    <div className="productos-grid">
+      <h2>{titulo}</h2>
       <ItemList productos={productos} />
     </div>
   );

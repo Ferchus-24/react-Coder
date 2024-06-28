@@ -7,12 +7,13 @@
   font-style: normal;
 }
 
-.header {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: coral;
+  background-color: rgb(216, 40, 37);
   padding: 10px;
+  color: aliceblue;
 }
 
 .nav-menu {
@@ -22,16 +23,24 @@
   gap: 10px;
 }
 
-.nav-link {
+.nav-links {
   text-decoration: none;
+  color: aliceblue;
 }
 
 .productos-grid {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+  gap: 50px;
+  text-align: center;
 }
 
 .carrito {
   text-decoration: none;
+  color: aliceblue;
+}
+
+.botones {
+  background-color: indianred;
 }

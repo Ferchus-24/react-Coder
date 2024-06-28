@@ -8,7 +8,7 @@ export const CartWidget = () => {
 
   return (
     <Link className="carrito" to="/carrito">
-      <CartCheck color="blue" /> {calcularCantidad()}
+      <CartCheck /> {calcularCantidad()}
     </Link>
   );
 };

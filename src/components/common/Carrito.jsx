@@ -31,7 +31,7 @@ const Carrito = () => {
           <Link to="/finalizar-compra">Finalizar compra</Link>
         </>
       ) : (
-        <h2>Carrito vacío :/</h2>
+        <h2>Su carrito está vacío</h2>
       )}
     </div>
   );

@@ -20,9 +20,10 @@ export const Navbar = () => {
 
   return (
     <nav className="nav">
+      <h1>SortisFrikis</h1>
       <ul className="nav-menu">
-        <li className="nav-item">
-          <NavLink to="/" activeclassname="active" className="nav-link">
+        <li className="nav-links">
+          <NavLink to="/" activeclassname="active" className="nav-links">
             Inicio
           </NavLink>
         </li>
@@ -32,7 +33,7 @@ export const Navbar = () => {
               <NavLink
                 to={`/category/${category.id}`}
                 activeclassname="active"
-                className="nav-link"
+                className="nav-links"
               >
                 {category.nombre}
               </NavLink>
