@@ -1,25 +1,38 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import categories from "../../data/categorias.json";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase/config";
 import { CartWidget } from "./common/CartWidget";
 
 export const Navbar = () => {
+  let [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    const categoriasRef = collection(db, "categorias");
+    getDocs(categoriasRef).then((res) => {
+      setCategories(
+        res.docs.map((doc) => {
+          return { ...doc.data() };
+        })
+      );
+    });
+  }, []);
+
   return (
-    <nav className="header">
-      <h1>Indumentaria Charlys</h1>
+    <nav className="nav">
       <ul className="nav-menu">
-        <li>
+        <li className="nav-item">
           <NavLink to="/" activeclassname="active" className="nav-link">
             Inicio
           </NavLink>
         </li>
         {categories.map((category) => {
           return (
-            <li key={category.id}>
+            <li className="nav-item" key={category.id}>
               <NavLink
-                className="nav-link"
                 to={`/category/${category.id}`}
                 activeclassname="active"
+                className="nav-link"
               >
                 {category.nombre}
               </NavLink>

@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
@@ -14,11 +14,18 @@ export const CartProvider = ({ children }) => {
   };
 
   const calcularTotal = () => {
-    return carrito.reduce((acc, prod) => acc + prod.precio, 0);
+    return carrito.reduce((acc, prod) => acc + prod.precio, 0).toFixed(2);
   };
 
   const vaciarCarrito = () => {
     setCarrito([]);
+  };
+
+  const eliminarProducto = (producto) => {
+    const productoEncontrado = carrito.find((prod) => prod.id === producto.id);
+    const indice = carrito.indexOf(productoEncontrado);
+
+    setCarrito(carrito.filter((prod) => prod.id !== producto.id));
   };
 
   return (
@@ -29,6 +36,7 @@ export const CartProvider = ({ children }) => {
         calcularCantidad,
         calcularTotal,
         vaciarCarrito,
+        eliminarProducto,
       }}
     >
       {children}
