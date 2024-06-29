@@ -42,6 +42,31 @@
   color: aliceblue;
 }
 
-.botones {
-  background-color: indianred;
+#botones {
+  background-color: black;
+  color: aliceblue;
+  margin-right: 2px;
+  &:hover {
+    background-color: rgba(12, 4, 4, 0.872);
+  }
+}
+
+.textos {
+  text-decoration: none;
+  color: black;
+}
+
+#container-carrito {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer {
+  background-color: rgb(216, 40, 37);
+  color: aliceblue;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  margin-top: 50px;
 }
