@@ -38,7 +38,7 @@ export const ItemListContainer = () => {
   }, [categoryId]);
 
   return (
-    <div className="productos-grid">
+    <div className="container fluid productos-grid">
       <h2>{titulo}</h2>
       <ItemList productos={productos} />
     </div>

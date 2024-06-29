@@ -19,7 +19,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className="nav">
+    <nav className="container-fluid nav">
       <h1>Sortis</h1>
       <ul className="nav-menu">
         <li className="nav-links">
