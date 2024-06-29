@@ -6,15 +6,29 @@ export const CartProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
 
   const agregarAlCarrito = (producto) => {
-    setCarrito([...carrito, producto]);
+    const productoEnCarrito = carrito.find((prod) => prod.id === producto.id);
+
+    if (productoEnCarrito) {
+      setCarrito(
+        carrito.map((prod) =>
+          prod.id === producto.id
+            ? { ...prod, cantidad: prod.cantidad + 1 }
+            : prod
+        )
+      );
+    } else {
+      setCarrito([...carrito, { ...producto, cantidad: 1 }]);
+    }
   };
 
   const calcularCantidad = () => {
-    return carrito.length;
+    return carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
   };
 
   const calcularTotal = () => {
-    return carrito.reduce((acc, prod) => acc + prod.precio, 0).toFixed(2);
+    return carrito
+      .reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0)
+      .toFixed(2);
   };
 
   const vaciarCarrito = () => {
@@ -22,10 +36,27 @@ export const CartProvider = ({ children }) => {
   };
 
   const eliminarProducto = (producto) => {
-    const productoEncontrado = carrito.find((prod) => prod.id === producto.id);
-    const indice = carrito.indexOf(productoEncontrado);
-
     setCarrito(carrito.filter((prod) => prod.id !== producto.id));
+  };
+
+  const incrementarProducto = (producto) => {
+    setCarrito(
+      carrito.map((prod) =>
+        prod.id === producto.id
+          ? { ...prod, cantidad: prod.cantidad + 1 }
+          : prod
+      )
+    );
+  };
+
+  const decrementarProducto = (producto) => {
+    setCarrito(
+      carrito.map((prod) =>
+        prod.id === producto.id
+          ? { ...prod, cantidad: prod.cantidad > 1 ? prod.cantidad - 1 : 1 }
+          : prod
+      )
+    );
   };
 
   return (
@@ -37,6 +68,8 @@ export const CartProvider = ({ children }) => {
         calcularTotal,
         vaciarCarrito,
         eliminarProducto,
+        incrementarProducto,
+        decrementarProducto,
       }}
     >
       {children}

@@ -1,5 +1,4 @@
 import "./css/main.css";
-import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ItemListContainer } from "../src/components/ItemListContainer";
 import ItemDetailContainer from "../src/components/ItemDetailContainer";

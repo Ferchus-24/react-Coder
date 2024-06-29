@@ -20,7 +20,7 @@ export const Navbar = () => {
 
   return (
     <nav className="nav">
-      <h1>SortisFrikis</h1>
+      <h1>Sortis</h1>
       <ul className="nav-menu">
         <li className="nav-links">
           <NavLink to="/" activeclassname="active" className="nav-links">
