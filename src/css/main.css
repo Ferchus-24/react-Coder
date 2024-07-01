@@ -7,14 +7,14 @@
   font-style: normal;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#nav-sorti {
   background-color: rgb(216, 40, 37);
   padding: 10px;
-  color: aliceblue;
   filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.592));
+}
+
+.color-white {
+  color: aliceblue;
 }
 
 .nav-menu {
@@ -22,11 +22,6 @@
   list-style-type: none;
   text-decoration: none;
   gap: 10px;
-}
-
-.nav-links {
-  text-decoration: none;
-  color: aliceblue;
 }
 
 .productos-grid {
@@ -39,7 +34,7 @@
 
 .carrito {
   text-decoration: none;
-  color: aliceblue;
+  color: black;
 }
 
 #botones {
