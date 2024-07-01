@@ -7,6 +7,10 @@ import { CartProvider } from "../context/CartContext";
 import { Checkout } from "./components/Checkout";
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "jquery";
+import "popper.js";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 function App() {
   return (
