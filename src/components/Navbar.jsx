@@ -24,7 +24,12 @@ export const Navbar = () => {
       id="nav-sorti"
       className="navbar navbar-expand-lg navbar-light container-fluid"
     >
-      <NavLink exact to="/" activeclassname="active" className="nav-link">
+      <NavLink
+        exact="true"
+        to="/"
+        activeclassname="active"
+        className="nav-link"
+      >
         <h1>Sortis</h1>
       </NavLink>
       <button
