@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase/config";
 import { CartWidget } from "./common/CartWidget";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Navbar = () => {
-  let [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     const categoriasRef = collection(db, "categorias");
@@ -20,45 +20,39 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      id="nav-sorti"
-      className="navbar navbar-expand-lg navbar-light container-fluid"
-    >
-      <NavLink
-        exact="true"
-        to="/"
-        activeclassname="active"
-        className="nav-link"
-      >
-        <h1>Sortis</h1>
-      </NavLink>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          {categories.map((category) => (
-            <li className="nav-item" key={category.id}>
-              <NavLink
-                to={`/category/${category.id}`}
-                activeclassname="active"
-                className="nav-link"
-              >
-                {category.nombre}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+    <nav id="nav-sorti" className="navbar navbar-expand-md">
+      <div className="container-fluid">
+        <NavLink exact="true" to="/" className="navbar-brand">
+          Sortis
+        </NavLink>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            {categories.map((category) => (
+              <li className="nav-item" key={category.id}>
+                <NavLink
+                  to={`/category/${category.id}`}
+                  activeClassName="active"
+                  className="nav-link"
+                >
+                  {category.nombre}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+          <CartWidget />
+        </div>
       </div>
-      <CartWidget />
     </nav>
   );
 };
