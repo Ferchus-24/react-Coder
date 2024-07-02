@@ -42,7 +42,7 @@ export const Navbar = () => {
               <li className="nav-item" key={category.id}>
                 <NavLink
                   to={`/category/${category.id}`}
-                  activeClassName="active"
+                  activeclassname="active"
                   className="nav-link"
                 >
                   {category.nombre}
