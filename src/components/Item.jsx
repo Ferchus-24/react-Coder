@@ -18,7 +18,7 @@ export const Item = ({ producto }) => {
         <p className="card-text">{producto.descripcion}</p>
         <Link
           id="botones"
-          className="textos btn btn-primary btn-sm"
+          className="textos btn btn-sm"
           to={`/item/${producto.id}`}
         >
           Ver más

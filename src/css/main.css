@@ -51,16 +51,16 @@
   color: black;
 }
 
-#container-carrito {
+/* #container-carrito {
   display: flex;
   flex-direction: row;
-}
+} */
 
-.footer {
+#footer {
   background-color: rgb(216, 40, 37);
-  color: aliceblue;
+  /* color: aliceblue;
   text-align: center;
   padding: 10px;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 50px; */
 }
