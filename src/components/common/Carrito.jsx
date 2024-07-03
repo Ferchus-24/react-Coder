@@ -22,21 +22,21 @@ const Carrito = () => {
           </h2>
           <button
             id="botones"
-            className="btn btn-sm mb-2"
+            className="btn btn-md mb-2"
             onClick={() => incrementarProducto(prod)}
           >
             +
           </button>
           <button
             id="botones"
-            className="btn btn-sm mb-2"
+            className="btn btn-md mb-2"
             onClick={() => decrementarProducto(prod)}
           >
             -
           </button>
           <button
             id="botones"
-            className="btn btn-sm mb-2"
+            className="btn btn-md mb-2"
             onClick={() => eliminarProducto(prod)}
           >
             X

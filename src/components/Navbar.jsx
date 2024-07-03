@@ -23,7 +23,7 @@ export const Navbar = () => {
     <nav id="nav-sorti" className="navbar navbar-expand-md">
       <div className="container-fluid">
         <NavLink exact="true" to="/" className="navbar-brand">
-          Sortis
+          <h1>Sortis</h1>
         </NavLink>
         <button
           className="navbar-toggler"
