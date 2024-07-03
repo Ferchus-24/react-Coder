@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from "react";
+import React, { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { Link } from "react-router-dom";
 
@@ -16,7 +16,7 @@ const Carrito = () => {
     <div className="container-fluid mt-3">
       <h1>Carrito</h1>
       {carrito.map((prod) => (
-        <Fragment key={prod.id}>
+        <div key={prod.id}>
           <h2>
             {prod.nombre}: ${prod.precio} x {prod.cantidad}
           </h2>
@@ -41,7 +41,7 @@ const Carrito = () => {
           >
             X
           </button>
-        </Fragment>
+        </div>
       ))}
       {carrito.length > 0 ? (
         <>
