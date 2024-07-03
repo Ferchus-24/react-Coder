@@ -24,14 +24,6 @@
   gap: 10px;
 }
 
-.productos-grid {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 50px;
-  text-align: center;
-}
-
 .carrito {
   text-decoration: none;
   color: black;
@@ -51,16 +43,6 @@
   color: black;
 }
 
-/* #container-carrito {
-  display: flex;
-  flex-direction: row;
-} */
-
 #footer {
   background-color: rgb(216, 40, 37);
-  /* color: aliceblue;
-  text-align: center;
-  padding: 10px;
-  width: 100%;
-  margin-top: 50px; */
 }
